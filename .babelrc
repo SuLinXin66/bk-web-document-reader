@@ -1,0 +1,15 @@
+{
+  "presets": [
+    [
+      "@babel/preset-env",
+      {
+        "loose": true, //解决Object.defineProperty
+        // "modules": false
+      }
+    ]
+  ],
+  "plugins": [
+    ["transform-es2015-classes", { "loose": true }],
+    "transform-es2015-object-super"
+  ]
+}
