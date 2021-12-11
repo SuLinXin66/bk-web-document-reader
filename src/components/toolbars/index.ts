@@ -12,7 +12,10 @@ import {
   On,
 } from "../../snabbdom";
 import { RenderInterface } from "../../types";
-import { createElement, htmlElementConvertToVNode } from "../../utils";
+import {
+  createElement,
+  htmlElementConvertToVNode,
+} from "../../utils";
 
 /**
  * 工具栏参数.

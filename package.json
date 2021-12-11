@@ -1,11 +1,11 @@
 {
   "name": "@byzk/document-web-reader",
-  "version": "1.0.0",
-  "description": "pdf/ofd文件阅读工具库",
+  "version": "1.0.1",
+  "description": "web文件阅读器",
   "main": "./dist/lib/index.js",
   "types": "./dist/types/index.d.ts",
-  "license": "MIT",
-  "author": "苏林鑫",
+  "license": "ISC",
+  "author": "苏林鑫 <15210204903@163.com>",
   "scripts": {
     "docs": "rm -rf docs && typedoc --out docs  src",
     "prebuild": "rm -rf dist docs",
@@ -15,6 +15,23 @@
     "build:win": "tsc && npm run rollup:other",
     "postbuild": "yarn docs && yarn rollup:other && cd dist && cp index-iife.min.js index-iife-ie.min.js && sed -i '' \"s/\\.default/['default']/g\" 'index-iife-ie.min.js' && sed -i '' 's/\\.catch/[\"catch\"]/g' 'index-iife-ie.min.js' && sed -i '' 's/\\.class,/[\"class\"],/g' 'index-iife-ie.min.js' && sed -i '' 's/\\.class;/[\"class\"];/g' 'index-iife-ie.min.js'"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/SuLinXin66/bk-web-document-reader"
+  },
+  "bugs": {
+    "url": "https://github.com/SuLinXin66/bk-web-document-reader/issus"
+  },
+  "keywords": [
+    "bk",
+    "byzk",
+    "document-reader",
+    "reader",
+    "web-reader",
+    "web-document-reader",
+    "web-document"
+  ],
+  "homepage": "https://github.com/SuLinXin66/bk-web-document-reader",
   "files": [
     "dist",
     "docs"

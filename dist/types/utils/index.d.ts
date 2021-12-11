@@ -47,3 +47,10 @@ export declare function vnodeConvert(vnode: VNode): VNode;
  * @returns 虚拟节点
  */
 export declare function htmlElementConvertToVNode(ele: HTMLElement, on?: On): VNode;
+/**
+ * 添加style样式到head标签中
+ * @param id styleId
+ * @param styleStr style标签内的内容
+ * @ignore
+ */
+export declare function addStyleTagToHead(id: string, styleStr: string): void;

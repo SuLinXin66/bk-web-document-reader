@@ -11,7 +11,7 @@ var __assign = (this && this.__assign) || function () {
     return __assign.apply(this, arguments);
 };
 exports.__esModule = true;
-exports.htmlElementConvertToVNode = exports.vnodeConvert = exports.removeElementsByName = exports.elementRemoveEvent = exports.elementAddEvent = exports.getElementsByClassName = exports.createElement = exports.isIE = void 0;
+exports.addStyleTagToHead = exports.htmlElementConvertToVNode = exports.vnodeConvert = exports.removeElementsByName = exports.elementRemoveEvent = exports.elementAddEvent = exports.getElementsByClassName = exports.createElement = exports.isIE = void 0;
 var snabbdom_1 = require("../snabbdom");
 /**
  * 判断是否为IE浏览器.
@@ -200,3 +200,21 @@ function htmlElementConvertToVNode(ele, on) {
     }, childNodes.length > 0 ? [] : textVal);
 }
 exports.htmlElementConvertToVNode = htmlElementConvertToVNode;
+/**
+ * 添加style样式到head标签中
+ * @param id styleId
+ * @param styleStr style标签内的内容
+ * @ignore
+ */
+function addStyleTagToHead(id, styleStr) {
+    var styleTag = document.getElementById(id);
+    if (styleTag) {
+        return;
+    }
+    styleTag = createElement("style");
+    styleTag.id = id;
+    styleTag.innerHTML = styleStr;
+    var headTag = document.getElementsByTagName("head")[0];
+    headTag.appendChild(styleTag);
+}
+exports.addStyleTagToHead = addStyleTagToHead;

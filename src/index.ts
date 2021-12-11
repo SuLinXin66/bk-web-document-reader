@@ -1,4 +1,5 @@
-import { AutoRender, ReaderParams } from "./render/AutoRender";
+import { AutoRender } from "./render/AutoRender";
+import "./style";
 import "./compatible";
 
 /**

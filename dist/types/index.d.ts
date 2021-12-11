@@ -1,4 +1,5 @@
 import { AutoRender } from "./render/AutoRender";
+import "./style";
 import "./compatible";
 /**
  * 创建阅读器

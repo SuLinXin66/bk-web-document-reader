@@ -28,7 +28,7 @@ var defaultReaderParams = {
             },
         ]
     },
-    sideTollbars: {},
+    sideToolbars: {},
     reader: {
         action: {
             loadFileInterface: {
@@ -73,8 +73,8 @@ var AutoRender = /** @class */ (function () {
             _this._layoutContent.top = __assign(__assign({}, params.toolbars), { content: toolbars });
             // }
             // if (!params.sideTollbars.hide) {
-            var sideToobars = new sideToolbar_1.SideToolbar(params.sideTollbars);
-            _this._layoutContent.left = __assign(__assign({}, params.sideTollbars), { content: sideToobars });
+            var sideToobars = new sideToolbar_1.SideToolbar(params.sideToolbars);
+            _this._layoutContent.left = __assign(__assign({}, params.sideToolbars), { content: sideToobars });
             // }
             var botttomToolBars = new bottomToolbar_1.BottomToolbar(params.bottomToolbars);
             _this._layoutContent.bottom = __assign(__assign({}, params.bottomToolbars), { hide: !((_a = params.bottomToolbars) === null || _a === void 0 ? void 0 : _a.show), content: botttomToolBars });
@@ -102,8 +102,8 @@ var AutoRender = /** @class */ (function () {
         if (!this._layoutContent) {
             this._layoutContent = {};
         }
-        if (data.sideTollbars) {
-            this._layoutContent.left = __assign(__assign({}, this._layoutContent.left), data.sideTollbars);
+        if (data.sideToolbars) {
+            this._layoutContent.left = __assign(__assign({}, this._layoutContent.left), data.sideToolbars);
         }
         if (data.toolbars) {
             this._layoutContent.top = __assign({}, this._layoutContent.top);

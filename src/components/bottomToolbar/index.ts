@@ -11,7 +11,6 @@ import {
   VNode,
 } from "../../snabbdom";
 import { createElement } from "../../utils";
-
 export interface BottomToolbarConstructor {
   className?: string;
   styles?: CSSStyleDeclaration;

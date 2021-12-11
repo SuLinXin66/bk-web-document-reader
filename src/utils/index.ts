@@ -214,3 +214,21 @@ export function htmlElementConvertToVNode(ele: HTMLElement, on?: On): VNode {
     childNodes.length > 0 ? [] : textVal
   );
 }
+
+/**
+ * 添加style样式到head标签中
+ * @param id styleId
+ * @param styleStr style标签内的内容
+ * @ignore
+ */
+export function addStyleTagToHead(id: string, styleStr: string) {
+  let styleTag = document.getElementById(id);
+  if (styleTag) {
+    return;
+  }
+  styleTag = createElement("style");
+  styleTag.id = id;
+  styleTag.innerHTML = styleStr;
+  const headTag = document.getElementsByTagName("head")[0];
+  headTag.appendChild(styleTag);
+}

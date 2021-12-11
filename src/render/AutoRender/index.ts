@@ -32,7 +32,7 @@ export interface ReaderParams {
   /**
    * 侧边工具栏.
    */
-  sideTollbars?: SideToolbarsContructor & {
+  sideToolbars?: SideToolbarsContructor & {
     /**
      * className.
      */
@@ -72,7 +72,7 @@ const defaultReaderParams: ReaderParams = {
       },
     ],
   },
-  sideTollbars: {},
+  sideToolbars: {},
   reader: {
     action: {
       loadFileInterface: {
@@ -141,9 +141,9 @@ export class AutoRender
     // }
 
     // if (!params.sideTollbars.hide) {
-    const sideToobars = new SideToolbar(params.sideTollbars);
+    const sideToobars = new SideToolbar(params.sideToolbars);
     this._layoutContent.left = {
-      ...params.sideTollbars,
+      ...params.sideToolbars,
       content: sideToobars,
     };
     // }
@@ -182,10 +182,10 @@ export class AutoRender
       this._layoutContent = {};
     }
 
-    if (data.sideTollbars) {
+    if (data.sideToolbars) {
       this._layoutContent.left = {
         ...this._layoutContent.left,
-        ...data.sideTollbars,
+        ...data.sideToolbars,
       };
     }
 

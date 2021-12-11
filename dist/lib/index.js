@@ -2,6 +2,7 @@
 exports.__esModule = true;
 exports.render = exports.utils = exports.snabbdom = exports.reader = exports.sideToolbar = exports.toolbar = exports.layout = exports.actions = exports.newReader = void 0;
 var AutoRender_1 = require("./render/AutoRender");
+require("./style");
 require("./compatible");
 /**
  * 创建阅读器

@@ -24,7 +24,7 @@ export interface ReaderParams {
     /**
      * 侧边工具栏.
      */
-    sideTollbars?: SideToolbarsContructor & {
+    sideToolbars?: SideToolbarsContructor & {
         /**
          * className.
          */
