@@ -1,6 +1,6 @@
 {
   "name": "@byzk/document-web-reader",
-  "version": "1.0.1",
+  "version": "1.0.3",
   "description": "web文件阅读器",
   "main": "./dist/lib/index.js",
   "types": "./dist/types/index.d.ts",

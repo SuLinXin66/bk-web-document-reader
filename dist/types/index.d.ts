@@ -17,3 +17,4 @@ export * as reader from "./components/reader";
 export * as snabbdom from "./snabbdom";
 export * as utils from "./utils";
 export * as render from "./render/AutoRender";
+export * from "./render/AutoRender";

@@ -1,6 +1,7 @@
 import { AutoRender } from "./render/AutoRender";
 import "./style";
 import "./compatible";
+import { ReaderType } from "./components/reader";
 
 /**
  * 创建阅读器
@@ -21,3 +22,4 @@ export * as reader from "./components/reader";
 export * as snabbdom from "./snabbdom";
 export * as utils from "./utils";
 export * as render from "./render/AutoRender";
+export * from "./render/AutoRender";
